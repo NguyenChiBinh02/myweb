@@ -3,30 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Phát Video</title>
+    <title>Trang Web Phát Nhiều Video</title>
     <style>
-        /* Đơn giản hóa giao diện */
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        /* Định dạng chung */
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
+            padding: 0;
         }
-        video {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #333;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        /* Header */
+        header {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #7f8c8d;
+        }
+        /* Khung video */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+        iframe {
+            width: 320px;
+            height: 180px;
+            border: none;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <video autoplay controls>
-        <source src="video1.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ phát video.
-    </video>
+    <header>
+        <h1>Nhạc chị Cam</h1>
+        <p>------------------------------------------------------------------------</p>
+    </header>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PoVzhiQ9IdU?start=253" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/1sx0Kpw4Ho0?start=141" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/MsHvLrs6sjk?start=165" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/P8KWIxdhkcc?start=226" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/1BPF2tOv5sI?start=920" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/1BPF2tOv5sI?start=1074" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/8wtXkQVAusI?start=231" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Pys2iOT9rpw?start=100" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
